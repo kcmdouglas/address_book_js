@@ -18,4 +18,9 @@ describe('Address',function () {
     expect(testAddress.city).to.equal("Anytown");
     expect(testAddress.state).to.equal("Anystate");
   });
+
+  it("adds the fullAddress method to all addresses", function() {
+    var testAddress = new Address("123 Main St.", "Anytown", "Anystate");
+    expect(testAddress.fullAddress()).to.equal("123 Main St., Anytown, Anystate");
+  });
 });
